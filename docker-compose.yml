@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  # Base de données
+  articles-db:
+    build: ./articles-db
+    image: articles-db
+    container_name: articles-db
+    networks:
+      - articles-network
+    volumes:
+      - articles-db-data:/var/lib/mysql
+
+networks:
+  articles-network:
+
+volumes:
+  articles-db-data:

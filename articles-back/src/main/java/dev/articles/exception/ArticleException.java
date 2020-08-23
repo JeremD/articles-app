@@ -1,6 +1,10 @@
 package dev.articles.exception;
 
+import dev.articles.dto.MessageErreurDto;
+
 public class ArticleException extends RuntimeException {
+
+	private MessageErreurDto messageErreur;
 
 	/**
 	 * Constructor
@@ -13,32 +17,33 @@ public class ArticleException extends RuntimeException {
 	/**
 	 * Constructor
 	 * 
-	 * @param message
+	 * @param messageErreur
 	 * @param cause
 	 * @param enableSuppression
 	 * @param writableStackTrace
 	 */
-	public ArticleException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
+	public ArticleException(String messageErreur, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
+		super(messageErreur, cause, enableSuppression, writableStackTrace);
 	}
 
 	/**
 	 * Constructor
 	 * 
-	 * @param message
+	 * @param messageErreur
 	 * @param cause
 	 */
-	public ArticleException(String message, Throwable cause) {
-		super(message, cause);
+	public ArticleException(String messageErreur, Throwable cause) {
+		super(messageErreur, cause);
 	}
 
 	/**
 	 * Constructor
 	 * 
-	 * @param message
+	 * @param messageErreur
 	 */
-	public ArticleException(String message) {
-		super(message);
+	public ArticleException(String messageErreur) {
+		super(messageErreur);
 	}
 
 	/**
@@ -48,6 +53,24 @@ public class ArticleException extends RuntimeException {
 	 */
 	public ArticleException(Throwable cause) {
 		super(cause);
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return messageErreur
+	 */
+	public MessageErreurDto getMessageErreur() {
+		return messageErreur;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param messageErreur to set
+	 */
+	public void setMessageErreur(MessageErreurDto messageErreur) {
+		this.messageErreur = messageErreur;
 	}
 
 }

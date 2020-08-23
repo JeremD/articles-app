@@ -10,7 +10,18 @@ services:
       - articles-network
     volumes:
       - articles-db-data:/var/lib/mysql
-    # Web App
+
+  # Web API
+  articles-back:
+    build: ./articles-back
+    image: articles-back
+    container_name: articles-back
+    depends_on:
+      - articles-db
+    ports:
+      - "9000:8080"
+    networks:
+      - articles-network
 
 networks:
   articles-network:

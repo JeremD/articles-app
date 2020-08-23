@@ -56,7 +56,7 @@ public class ArticleController {
 		}
 
 		Article nouvelArticle = articleService.creer(article.getLibelle(), article.getPrix());
-		ArticleDto articleDto = new ArticleDto(nouvelArticle.getLibelle(), nouvelArticle.getPrix());
+		ArticleDto articleDto = new ArticleDto(nouvelArticle.getId(), nouvelArticle.getLibelle(), nouvelArticle.getPrix());
 
 		return ResponseEntity.ok(articleDto);
 	}

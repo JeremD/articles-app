@@ -1,15 +1,18 @@
 package dev.articles.dto;
 
+import org.springframework.data.annotation.Id;
+
 public class ArticleDto {
 
 	/** id */
-	private int id;
+	@Id
+	private Integer id;
 
 	/** libelle */
 	private String libelle;
 
 	/** prix */
-	private double prix;
+	private Float prix;
 
 	/**
 	 * Constructor
@@ -24,7 +27,8 @@ public class ArticleDto {
 	 * @param libelle
 	 * @param prix
 	 */
-	public ArticleDto(String libelle, double prix) {
+	public ArticleDto(Integer id, String libelle, Float prix) {
+		this.id = id;
 		this.libelle = libelle;
 		this.prix = prix;
 	}
@@ -70,7 +74,7 @@ public class ArticleDto {
 	 * 
 	 * @return prix
 	 */
-	public double getPrix() {
+	public Float getPrix() {
 		return prix;
 	}
 
@@ -79,7 +83,7 @@ public class ArticleDto {
 	 * 
 	 * @param prix to set
 	 */
-	public void setPrix(double prix) {
+	public void setPrix(Float prix) {
 		this.prix = prix;
 	}
 

@@ -11,12 +11,15 @@
 	</parent>
 	<groupId>dev</groupId>
 	<artifactId>articles-back</artifactId>
-	<version>1</version>
+	<version>1.0</version>
 	<name>articles-back</name>
 	<description>Web API articles</description>
+	<packaging>jar</packaging>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>

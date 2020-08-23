@@ -10,6 +10,7 @@ services:
       - articles-network
     volumes:
       - articles-db-data:/var/lib/mysql
+    # Web App
 
 networks:
   articles-network:

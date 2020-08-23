@@ -39,7 +39,7 @@ public class ArticleService {
 	 * @return
 	 */
 	@Transactional
-	public Article creer(String libelle, Double prix) {
+	public Article creer(String libelle, Float prix) {
 		return articleRepository.save(new Article(libelle, prix));
 	}
 

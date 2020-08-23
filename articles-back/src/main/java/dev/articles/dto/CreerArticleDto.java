@@ -1,6 +1,7 @@
 package dev.articles.dto;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -8,13 +9,14 @@ public class CreerArticleDto {
 
 	/** libelle */
 	@NotNull
+	@Size(min=5)
 	@JsonProperty("libelle")
 	private String libelle;
 
 	/** prix */
 	@NotNull
 	@JsonProperty("prix")
-	private double prix;
+	private Float prix;
 
 	/**
 	 * Getter
@@ -39,7 +41,7 @@ public class CreerArticleDto {
 	 * 
 	 * @return prix
 	 */
-	public double getPrix() {
+	public Float getPrix() {
 		return prix;
 	}
 
@@ -48,7 +50,7 @@ public class CreerArticleDto {
 	 * 
 	 * @param prix to set
 	 */
-	public void setPrix(double prix) {
+	public void setPrix(Float prix) {
 		this.prix = prix;
 	}
 

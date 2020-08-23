@@ -1,0 +1,9 @@
+<h2>Lister les articles</h2>
+<div class="input-group-append">
+  <button (click)="lister()">Afficher</button>
+</div>
+
+<ul *ngIf="listArticles">
+  <li> Libellé = {{listArticles.libelle}}</li>
+  <li> Prix = {{listArticles.prix}}</li>
+</ul>

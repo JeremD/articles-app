@@ -19,7 +19,20 @@ services:
     depends_on:
       - articles-db
     ports:
-      - "9000:8080"
+      - "8000:8080"
+    networks:
+      - articles-network
+
+  # App Angular
+  articles-front:
+    build: ./articles-front
+    image: articles-front
+    container_name: articles-front
+    depends_on:
+      - articles-db
+      - articles-back
+    ports:
+      - "4000:4200"
     networks:
       - articles-network
 

@@ -1,7 +1,6 @@
 import { Article } from './../models/Article';
 import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
-import { Article } from '../models/Article';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs/internal/Subject';
 import { Observable } from 'rxjs';

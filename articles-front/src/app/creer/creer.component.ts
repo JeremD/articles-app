@@ -13,7 +13,6 @@ export class CreerComponent implements OnInit {
   }
 
   creer(): void {
-    alert('ohno');
   }
 
 }

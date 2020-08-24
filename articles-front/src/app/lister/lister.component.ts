@@ -1,7 +1,7 @@
 import { DataService } from './../services/data.service';
 import { Article } from './../models/Article';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-lister',
@@ -23,12 +23,8 @@ export class ListerComponent implements OnInit, OnDestroy {
     );
   }
 
-  lister(): void {
-    this.ServiceArticle.listerArticle().subscribe(
-      article => this.articlesList = article,
-      err => console.error(err),
-      () => { }
-    );
+  lister(): Observable<Article> {
+    return this.ServiceArticle.listerArticle();
   }
 
   ngOnDestroy(): void {
